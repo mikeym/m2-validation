@@ -38,7 +38,7 @@ The `show-validation-icon` directive expects:
 * To be used on a form element with an `ng-model` attribute.
 * To be used on a child element of a form with a `name` attribute.
 
-If any of the above conditions are not met, the directive will throw an exception. See more examples on the [demo page](demos/demo.html).
+If any of the above conditions are not met, the directive will throw an exception. See more examples on the [demo page](http://htmlpreview.github.io/?https://github.com/mikeym/m2-validation/blob/master/validation-icon/demos/demo.html).
 
 ## Motivation
 
