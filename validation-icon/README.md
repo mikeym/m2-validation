@@ -15,7 +15,6 @@ The directive is intended for use on AngularJS forms styled with Bootstrap, and 
 
 The `show-validation-icon` directive is added as an attribute to the input field, as shown below:
 
-    ```
     <form role="form" name="form.test" id="form.test" novalidate>
 
       <div class="form-group has-feedback"
@@ -30,7 +29,6 @@ The `show-validation-icon` directive is added as an attribute to the input field
       </div>
 
     </form>
-    ```
 
 The `show-validation-icon` directive expects:
 
@@ -54,11 +52,10 @@ To use the `show-validation-icon` directive, you'll first need to install Angula
 1. Copy [validation-icon.js](validation-icon.js) to wherever it is you want to put such things.
 2. Add the `m2-validation-icon` module to your Angular app:
 
-        ```
         angular.module('demoApp', [
           'm2-validation-icon'
           ]);
-        ```
+
 3. Add `show-validation-icon` to your input fields. Please see the [demo page](http://htmlpreview.github.io/?https://github.com/mikeym/m2-validation/blob/master/validation-icon/demos/demo.html) for more examples.
 
 ## Tests
