@@ -11,6 +11,8 @@ The `show-validation-icon` is an Angular JS directive used in an input field to 
 
 The directive is intended for use on AngularJS forms styled with Bootstrap, and works best on text-based input fields with `text`, `password`, `email` and similar types.
 
+### [Demo Page](http://htmlpreview.github.io/?https://github.com/mikeym/m2-validation/blob/master/validation-icon/demos/demo.html)
+
 ## Code Example
 
 The `show-validation-icon` directive is added as an attribute to the input field, as shown below:
