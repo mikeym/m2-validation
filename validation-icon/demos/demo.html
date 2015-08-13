@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html ng-app="iconDemoApp" ng-controller="AppCtrl">
+
+<head>
+  <title>AngularJS show-validation-icon directive demo</title>
+  <link data-require="bootstrap-css@3.3.1" data-semver="3.3.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+  <script src="https://code.angularjs.org/1.4.3/angular.js" data-semver="1.4.3" data-require="angular.js@1.4.3"></script>
+  <script src="../validation-icon.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <header class="row">
+    <h1 class="col-sm-12">Validation Icons Demo</h1>
+  </header>
+  <section class="row">
+    <div class="col-sm-12">
+      <p>
+        Validation icons at the right edge of Angular JS / Bootstrap form fields are created with the
+        <code>show-validation-icon</code> directive. Each field on this form includes this attribute directive.
+      </p>
+      <p>
+        The <code>show-validation-icon</code> directive conditionally displays one of these three
+        Glyphicon icons in a text-type input field:
+      </p>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <span class="glyphicon glyphicon-asterisk"></span> An asterisk is displayed when a field is
+          unchanged (<code>!$dirty</code>) and has a <code>required</code> attribute.
+        </li>
+        <li class="list-group-item">
+          <span class="glyphicon glyphicon-ok"></span> A check is displayed when a field is is valid
+          (<code>$valid</code>) and <code>$dirty</code>.
+        </li>
+        <li class="list-group-item">
+          <span class="glyphicon glyphicon-remove"></span> An x is displayed when a field is not
+          valid (<code>!$valid</code>) and <code>$dirty</code>.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Usage:</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        Add the <code>show-validation-icon</code> directive to an input field like this:
+      </p>
+      <pre>
+  &lt;form role="form" name="form.test" id="form.test" novalidate&gt;
+
+    &lt;div class="form-group has-feedback"
+         ng-class="{ 'has-error' : form.test.requiredfield.$invalid && !form.test.requiredfield.$pristine,
+                     'has-success' : form.test.requiredfield.$valid && !form.test.requiredfield.$pristine }"&gt;
+      &lt;label for="requiredfield" class="control-label"&gt;Required text field&lt;/label&gt;
+
+      &lt;input type="text" id="requiredfield" name="requiredfield" class="form-control"
+             placeholder="type something" required aria-required="true"
+             <mark>show-validation-icon</mark>
+             ng-model="model.requiredfield" ng-model-options="{ updateOn: 'blur' }"&gt;
+    &lt;/div&gt;
+
+  &lt;/form&gt;
+      </pre>
+      <p>
+        The directive checks to make sure that the input field has a <code>name</code>
+        attribute, has an <code>ng-model</code> attribute, and is a child of a
+        <code>form</code> (or alias <code>ng-form</code>) element that has a <code>name</code> attribute.
+        If any of those conditions are not met, the directive throws an exception.
+      </p>
+      <p>See the <a href="../README.md">project's readme file</a> for more information about installation.</p>
+    </div>
+  </section>
+
+
+  <!-- Form with input field examples, submit handled by controller function -->
+  <form role="form" name="form.test" id="form.test" novalidate class="col-sm-12">
+
+    <!-- different status indications bound to the model, only one shows -->
+    <div class="panel">
+      <div class="panel-body bg-info" ng-show='model.formstatus === "unsubmitted"'>Form state: not yet submitted</div>
+      <div class="panel-body bg-success" ng-show='model.formstatus === "valid"'>Form state: valid data submitted</div>
+      <div class="panel-body bg-warning" ng-show='model.formstatus === "invalid"'>Form state: invalid data submitted</div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">These examples work pretty well:</h3>
+      </div>
+      <div class="panel-body">
+
+        <!-- required text field -->
+        <div class="form-group has-feedback"
+             ng-class="{ 'has-error' : form.test.requiredfield.$invalid && !form.test.requiredfield.$pristine,
+                         'has-success' : form.test.requiredfield.$valid && !form.test.requiredfield.$pristine }">
+          <label for="requiredfield" class="control-label">Required text field</label>
+
+          <input type="text" id="requiredfield" name="requiredfield" class="form-control"
+                 placeholder="type something" required aria-required="true"
+                 show-validation-icon
+                 ng-model="model.requiredfield" ng-model-options="{ updateOn: 'blur' }">
+        </div>
+
+        <!-- non-required text field -->
+        <div class="form-group has-feedback"
+             ng-class="{ 'has-error' : form.test.nonrequiredfield.$invalid && !form.test.nonrequiredfield.$pristine,
+                         'has-success' : form.test.nonrequiredfield.$valid && !form.test.nonrequiredfield.$pristine }">
+          <label for="nonrequiredfield" class="control-label">Optional (non-required) text field</label>
+
+          <input type="text" id="nonrequiredfield" name="nonrequiredfield" class="form-control"
+                 placeholder="type something if you feel like it"
+                 show-validation-icon
+                 ng-model="model.nonrequiredfield" ng-model-options="{ updateOn: 'blur' }">
+        </div>
+
+        <!-- required email field -->
+        <div class="form-group has-feedback"
+             ng-class="{ 'has-error' : form.test.requiredemail.$invalid && !form.test.requiredemail.$pristine,
+                         'has-success' : form.test.requiredemail.$valid && !form.test.requiredemail.$pristine }">
+          <label for="requiredemail" class="control-label">Required email field</label>
+
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+            <input type="email" id="requiredemail" name="requiredemail" class="form-control"
+                   placeholder="enter an email address" required aria-required="true"
+                   show-validation-icon
+                   ng-model="model.requiredemail" ng-model-options="{ updateOn: 'blur' }">
+          </div>
+        </div>
+
+        <!-- required password field min 6 chars -->
+        <div class="form-group has-feedback"
+             ng-class="{ 'has-error' : form.test.requiredpassword.$invalid && !form.test.requiredpassword.$pristine,
+                         'has-success' : form.test.requiredpassword.$valid && !form.test.requiredpassword.$pristine }">
+          <label for="requiredpassword" class="control-label">Required password field</label>
+
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+            <input type="password" id="requiredpassword" name="requiredpassword" class="form-control"
+                   placeholder="enter password at least 6 characters long"
+                   ng-minlength="6" required aria-required="true"
+                   show-validation-icon
+                   ng-model="model.requiredpassword" ng-model-options="{ updateOn: 'blur' }">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">These examples work but look sad:</h3>
+      </div>
+      <div class="panel-body">
+
+        <!-- trailing input group addon, awkward -->
+        <div class="form-group has-feedback"
+             ng-class="{ 'has-error' : form.test.money.$invalid && !form.test.money.$pristine,
+                         'has-success' : form.test.money.$valid && !form.test.money.$pristine }">
+        <label for="money" class="control-label">Trailing .input-group-addon</label>
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input type="number" class="form-control" id="money" name="money"
+                   placeholder="Amount" show-validation-icon
+                   required aria-required="true" ng-model="model.money">
+            <span class="input-group-addon">.00</span>
+          </div>
+        </div>
+
+        <div class="form-group has-feedback"
+             ng-class="{ 'has-error' : form.test.numbers.$invalid && !form.test.numbers.$pristine,
+                         'has-success' : form.test.numbers.$valid && !form.test.numbers.$pristine }">
+          <label for="numbers" class="control-label">Select control</label>
+          <select class="form-control" id="numbers" name="numbers" ng-model="model.numbers"
+                  show-validation-icon required>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">I want to do things the hard way</h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          I don't like change. I like typing a lot. Say I didn't want to use this directive, what would I use instead?
+        </p>
+      <pre>
+  &lt;form role="form" name="form.test" id="form.test" novalidate&gt;
+
+    &lt;div class="form-group has-feedback"
+         ng-class="{ 'has-error' : form.test.thehardway.$invalid && !form.test.thehardway.$pristine,
+                     'has-success' : form.test.thehardway.$valid && !form.test.thehardway.$pristine }"&gt;
+      &lt;label for="thehardway" class="control-label"&gt;Let's all type more&lt;/label&gt;
+
+      &lt;input type="text" id="thehardway" name="thehardway" class="form-control"
+             placeholder="like in the olden days" required aria-required="true"
+             ng-model="model.thehardway" ng-model-options="{ updateOn: 'blur' }"&gt;
+      <mark>&lt;span class="glyphicon form-control-feedback" aria-hidden="true"
+            ng-class="{'glyphicon-asterisk' : form.test.thehardway.$error['required'] && form.test.thehardway.$pristine,
+                       'glyphicon-remove' : form.test.thehardway.$invalid && !form.test.thehardway.$pristine,
+                       'glyphicon-ok' : form.test.thehardway.$valid && !form.test.thehardway.$pristine}"&gt;&lt;/span&gt;</mark>
+    &lt;/div&gt;
+
+  &lt;/form&gt;
+      </pre>
+
+        <p>
+          Here it is in real life...
+        </p>
+        <div class="form-group has-feedback"
+             ng-class="{ 'has-error' : form.test.thehardway.$invalid && !form.test.thehardway.$pristine,
+                         'has-success' : form.test.thehardway.$valid && !form.test.thehardway.$pristine }">
+          <label for="thehardway" class="control-label">Let's all type more</label>
+
+          <input type="text" id="thehardway" name="thehardway" class="form-control"
+                 placeholder="like in the olden days" required aria-required="true"
+                 ng-model="model.thehardway" ng-model-options="{ updateOn: 'blur' }">
+          <span class="glyphicon form-control-feedback" aria-hidden="true"
+                ng-class="{'glyphicon-asterisk' : form.test.thehardway.$error['required'] && form.test.thehardway.$pristine,
+                           'glyphicon-remove' : form.test.thehardway.$invalid && !form.test.thehardway.$pristine,
+                           'glyphicon-ok' : form.test.thehardway.$valid && !form.test.thehardway.$pristine}"></span>
+        </div>
+      </div>
+    </div>
+
+      <!-- Buttons -->
+    <div class="form-group">
+      <button type="submit" ng-click='submitForm()' class="btn btn-primary">Submit</button>
+      <button type="cancel" ng-click='clearForm()' class="btn btn-default">Clear</button>
+    </div>
+
+  </form>
+
+</div>
+</body>
+
+</html>
