@@ -41,6 +41,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="demo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/validation-icon/demos/demo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.0">
+              <caret line="76" column="93" selection-start-line="76" selection-start-column="93" selection-end-line="76" selection-end-column="93" />
+              <folding>
+                <marker date="1439521943000" expanded="true" signature="4502:4701" placeholder="{...}" />
+                <marker date="1439521943000" expanded="true" signature="5210:5421" placeholder="{...}" />
+                <marker date="1439521943000" expanded="true" signature="5944:6143" placeholder="{...}" />
+                <marker date="1439521943000" expanded="true" signature="6837:7048" placeholder="{...}" />
+                <marker date="1439521943000" expanded="true" signature="8024:8191" placeholder="{...}" />
+                <marker date="1439521943000" expanded="true" signature="8736:8911" placeholder="{...}" />
+                <marker date="1439521943000" expanded="true" signature="10972:11159" placeholder="{...}" />
+                <marker date="1439521943000" expanded="true" signature="11602:11922" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="karma.conf.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/karma.conf.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -51,24 +70,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="demo.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/validation-form-group/demos/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.923077">
-              <caret line="67" column="45" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="45" />
-              <folding />
+            <state vertical-scroll-proportion="0.34851936">
+              <caret line="83" column="99" selection-start-line="83" selection-start-column="99" selection-end-line="83" selection-end-column="99" />
+              <folding>
+                <marker date="1439521908000" expanded="true" signature="7161:7396" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/validation-form-group/README.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.136">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -84,15 +105,15 @@
         <option value="$PROJECT_DIR$/validation-icon/validation-icon.js" />
         <option value="$PROJECT_DIR$/validation-icon/validation-icon-tests.js" />
         <option value="$PROJECT_DIR$/validation-icon/demos/app.js" />
-        <option value="$PROJECT_DIR$/validation-icon/demos/demo.html" />
         <option value="$PROJECT_DIR$/validation-form-group/demos/app.js" />
         <option value="$PROJECT_DIR$/validation-form-group/validation-form-group.js" />
-        <option value="$PROJECT_DIR$/validation-form-group/demos/demo.html" />
         <option value="$PROJECT_DIR$/validation-icon/README.md" />
-        <option value="$PROJECT_DIR$/validation-form-group/README.md" />
         <option value="$PROJECT_DIR$/karma.conf.js" />
         <option value="$PROJECT_DIR$/validation-form-group/validation-form-group-tests.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/validation-form-group/README.md" />
+        <option value="$PROJECT_DIR$/validation-form-group/demos/demo.html" />
+        <option value="$PROJECT_DIR$/validation-icon/demos/demo.html" />
       </list>
     </option>
   </component>
@@ -163,6 +184,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="validation-icon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m2-validation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m2-validation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="validation-icon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -339,7 +378,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
+          <folding>
+            <marker date="1439521943000" expanded="true" signature="4502:4701" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="5210:5421" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="5944:6143" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="6837:7048" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="8024:8191" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="8736:8911" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="10972:11159" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="11602:11922" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -409,14 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validation-icon/demos/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-45.03846">
-          <caret line="80" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/validation-form-group/demos/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.027619822">
@@ -432,17 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-24.448277">
           <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validation-form-group/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.827587">
-          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -479,14 +508,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validation-form-group/demos/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.923077">
-          <caret line="67" column="45" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -495,6 +516,44 @@
         <state vertical-scroll-proportion="0.136">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation-form-group/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation-icon/demos/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0">
+          <caret line="76" column="93" selection-start-line="76" selection-start-column="93" selection-end-line="76" selection-end-column="93" />
+          <folding>
+            <marker date="1439521943000" expanded="true" signature="4502:4701" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="5210:5421" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="5944:6143" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="6837:7048" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="8024:8191" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="8736:8911" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="10972:11159" placeholder="{...}" />
+            <marker date="1439521943000" expanded="true" signature="11602:11922" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validation-form-group/demos/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34851936">
+          <caret line="83" column="99" selection-start-line="83" selection-start-column="99" selection-end-line="83" selection-end-column="99" />
+          <folding>
+            <marker date="1439521908000" expanded="true" signature="7161:7396" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

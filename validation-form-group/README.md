@@ -1,8 +1,8 @@
-# show-validation-icon
+# show-form-group-validation
 
 ## Synopsis
 
-The `show-form-group-validation` is an Angular JS directive used in an input field to add Bootstrap validation classes to an ancestor element with a `form-group` class. The conditionally-added validation classes affect an input field's label, border, add-ons and icons.
+The `show-form-group-validation` Angular JS directive is used in an input field to add Bootstrap validation classes to an ancestor element with a `form-group` class. The conditionally-added validation classes affect an input field's label, border, add-ons and icons.
 
 The Bootstrap validation classes applied by the directive mark an invalid field (plus labels & etc) in red, a valid field in green, and has no effect on non-validated or pristine fields.
 
