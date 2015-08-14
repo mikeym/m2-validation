@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html ng-app="formGroupDemoApp" ng-controller="AppCtrl">
+
+<head>
+  <title>AngularJS show-form-group-validation directive demo</title>
+  <link data-require="bootstrap-css@3.3.1" data-semver="3.3.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+  <script src="https://code.angularjs.org/1.4.3/angular.js" data-semver="1.4.3" data-require="angular.js@1.4.3"></script>
+  <script src="../validation-form-group.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <header class="row col-sm-12">
+    <h1>Form Group Validation Demo</h1>
+    <h3>From the <a href="https://github.com/mikeym/m2-validation/blob/master/validation-form-group/">validation-form-group</a> project on Github.</h3>
+  </header>
+
+  <section class="row">
+    <div class="col-sm-12">
+      <p>
+        Bootstrap classes that show validity are set in the parent of an input element using the
+        <code>show-form-group-validation</code> Angular JS directive.
+      </p>
+      <p>
+        The <code>show-form-group-validation</code> directive conditionally adds and removes validation
+        classes from a parent of a form input element. The parent element must have a <code>form-group</code>
+        class, as described in <a href="http://getbootstrap.com/css/#forms-control-validation">Boostrap Validation states</a>.
+        The input element's parent need not be an immediate parent element &mdash; the ancestor tree will be explored.
+      </p>
+      <p>
+        The classes below are added and removed from the parent based on the validity of the input element's model:
+      </p>
+      <ul class="list-group">
+        <li class="list-group-item">
+          When the input element is <code>$dirty</code> and <code>$valid</code>, a <code>has-success</code> Bootstrap
+          class will be added to the parent with the <code>form-group</code> class.
+        </li>
+        <li class="list-group-item">
+          When the input element is <code>$dirty</code> and <code>$invalid</code>, a <code>has-error</code> Bootstrap
+          class will be added to the parent with the <code>form-group</code> class.
+        </li>
+        <li class="list-group-item">
+          Otherwise, neither of these classes will be added to the input's parent by the directive.
+        </li>
+      </ul>
+      <p>
+        The effect of adding the error and success classes is to highlight field labels, borders, icons and
+        add-ons when an input is valid or invalid.
+      </p>
+    </div>
+  </section>
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Usage:</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        Add the <code>show-form-group-validation</code> directive to an input field like this:
+      </p>
+      <pre>
+  &lt;form role="form" name="form.test" id="form.test" novalidate&gt;
+
+    &lt;div class="form-group"&gt;
+      &lt;label for="textwithvalidation" class="control-label"&gt;Required text field, form-group validation done using the directive&lt;/label&gt;
+      &lt;input type="text" id="textwithvalidation" name="textwithvalidation" class="form-control"
+             <mark>show-form-group-validation</mark>
+             placeholder="type something" required aria-required="true"
+             ng-model="model.textwithvalidation" ng-model-options="{ updateOn: 'blur' }"&gt;
+    &lt;/div&gt;
+
+  &lt;/form&gt;
+      </pre>
+      <p>
+        The directive checks to make sure that the input field has a <code>name</code>
+        attribute, has an <code>ng-model</code> attribute, and is a child of a
+        <code>form</code> (or alias <code>ng-form</code>) element that has a <code>name</code> attribute.
+        The directive also checks to make sure that an ancestor of the input has a <code>form-group</code>
+        class. Note the <code>form-group</code> ancestor should not be shared by more than one input field.
+        If any of these conditions are not met, the directive throws an exception that should point you in the
+        right direction.
+      </p>
+      <p>See the <a href="../README.md">project's readme file</a> for more information about installation.</p>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Form with input field examples, submit handled by controller function -->
+  <form role="form" name="form.test" id="form.test" novalidate class="col-sm-12">
+
+    <!-- different status indications bound to the model, only one shows -->
+    <div class="panel">
+      <div class="panel-body bg-info" ng-show='model.formstatus === "unsubmitted"'>Form state: not yet submitted</div>
+      <div class="panel-body bg-success" ng-show='model.formstatus === "valid"'>Form state: valid data submitted</div>
+      <div class="panel-body bg-warning" ng-show='model.formstatus === "invalid"'>Form state: invalid data submitted</div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Examples using the directive:</h3>
+      </div>
+      <div class="panel-body">
+
+        <!-- uses the directive -->
+        <div class="form-group">
+          <label for="textwithvalidation" class="control-label">Required text field, form-group validation done using the directive</label>
+          <input type="text" id="textwithvalidation" name="textwithvalidation" class="form-control"
+                 show-form-group-validation
+                 placeholder="type something" required aria-required="true"
+                 ng-model="model.textwithvalidation" ng-model-options="{ updateOn: 'blur' }">
+        </div>
+
+        <div class="form-group">
+          <label for="emailwithvalidation" class="control-label">Required email field, form-group validation done using the directive</label>
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+            <input type="email" id="emailwithvalidation" name="emailwithvalidation" class="form-control"
+                   show-form-group-validation
+                   placeholder="type an email address" required aria-required="true"
+                   ng-model="model.emailwithvalidation" ng-model-options="{ updateOn: 'blur' }">
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Examples that don't use the directive:</h3>
+      </div>
+      <div class="panel-body">
+
+        <!-- no form group error/success handling -->
+        <div class="form-group">
+          <label for="noformgroupval" class="control-label">Required field with no form-group validation</label>
+
+          <input type="text" id="noformgroupval" name="noformgroupval" class="form-control"
+                 placeholder="type something else" required aria-required="true"
+                 ng-model="model.noformgroupval" ng-model-options="{ updateOn: 'blur' }">
+        </div>
+
+        <!-- manual form group error/success handling -->
+        <div class="form-group"
+             ng-class="{ 'has-error' : form.test.thehardwayformgroupval.$invalid && !form.test.thehardwayformgroupval.$pristine,
+                         'has-success' : form.test.thehardwayformgroupval.$valid && !form.test.thehardwayformgroupval.$pristine }">
+          <label for="thehardwayformgroupval" class="control-label">Required field, form-group validation done using ng-class tests</label>
+
+          <input type="text" id="thehardwayformgroupval" name="thehardwayformgroupval" class="form-control"
+                 placeholder="this field does things the hard way using the code shown below" required aria-required="true"
+                 ng-model="model.thehardwayformgroupval" ng-model-options="{ updateOn: 'blur' }">
+        </div>
+        <p>
+          Here's how to replicate what the directive does by typing a whole lot of stuff instead:
+        </p>
+<pre>
+  &lt;form role="form" name="form.test" id="form.test" novalidate&gt;
+
+    &lt;div class="form-group"
+         <mark>ng-class="{ 'has-error' : form.test.thehardwayformgroupval.$invalid && !form.test.thehardwayformgroupval.$pristine,
+                     'has-success' : form.test.thehardwayformgroupval.$valid && !form.test.thehardwayformgroupval.$pristine }"</mark>&gt;
+      &lt;label for="thehardwayformgroupval" class="control-label"&gt;Required field, form-group validation done using ng-class tests&lt;/label&gt;
+
+      &lt;input type="text" id="thehardwayformgroupval" name="thehardwayformgroupval" class="form-control"
+             placeholder="this field does things the hard way using the code shown below" required aria-required="true"
+             ng-model="model.thehardwayformgroupval" ng-model-options="{ updateOn: 'blur' }"&gt;
+    &lt;/div&gt;
+
+  &lt;/form&gt;
+</pre>        
+        
+
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="form-group">
+      <button type="submit" ng-click='submitForm()' class="btn btn-primary">Submit</button>
+      <button type="cancel" ng-click='clearForm()' class="btn btn-default">Clear</button>
+    </div>
+
+  </form>
+
+</div>
+</body>
+
+</html>

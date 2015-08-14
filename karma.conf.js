@@ -18,7 +18,10 @@ module.exports = function(config) {
       'misc/angular-mocks-1.4.3.js',
       'validation-icon/validation-icon.js',
       'validation-icon/validation-icon-tests.js',
-      'validation-icon/demos/app.js'
+      'validation-icon/demos/app.js',
+      'validation-form-group/validation-form-group.js',
+      'validation-form-group/validation-form-group-tests.js',
+      'validation-form-group/demos/app.js'
     ],
 
 
@@ -34,7 +37,10 @@ module.exports = function(config) {
 
     ngHtml2JsPreprocessor: {
       // strip this from the file path
-      stripPrefix: 'validation-icon/demos',
+      stripPrefix: [
+        'validation-icon/demos',
+        'validation-form-group/demos'
+      ],
       //stripSufix: '.ext',
       // prepend this to the
       //prependPrefix: 'app/',

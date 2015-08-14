@@ -5,6 +5,7 @@
 These components are intended to make it easier to show field validation states in AngularJS projects that use Bootstrap for styling. See the individual projects for more information.
   
 * [show-validation-icon](/validation-icon/) is a directive that conditionally displays a small validation icon at the right of text-based input fields.
+* [show-form-group-validation](/validation-form-group/) is a directive that conditionally applies Bootstrap's has-success or has-error classes to elements in a form-group, including labels, add-ons and icons.
 
 More coming, stay tuned...
 

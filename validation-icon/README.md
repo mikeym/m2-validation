@@ -51,14 +51,15 @@ save you a bit of time and trouble too.
 
 To use the `show-validation-icon` directive, you'll first need to install Angular JS and the Bootstrap CSS styles. Then:
 
-1. Copy [validation-icon.js](validation-icon.js) to wherever it is you want to put such things.
-2. Add the `m2-validation-icon` module to your Angular app:
+1. Copy [validation-icon.js](validation-icon.js) to wherever it is you keep tiny open-source script files.
+2. Load the script in your main `index.html` page.
+3. Add the `m2-validation-icon` module to your Angular app:
 
         angular.module('demoApp', [
           'm2-validation-icon'
           ]);
 
-3. Add `show-validation-icon` to your input fields. Please see the [demo page](http://htmlpreview.github.io/?https://github.com/mikeym/m2-validation/blob/master/validation-icon/demos/demo.html) for more examples.
+4. Add `show-validation-icon` to your input fields. Please see the [demo page](http://htmlpreview.github.io/?https://github.com/mikeym/m2-validation/blob/master/validation-icon/demos/demo.html) for more examples.
 
 ## Tests
 
