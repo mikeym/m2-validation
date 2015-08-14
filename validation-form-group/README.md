@@ -6,7 +6,7 @@ The `show-form-group-validation` Angular JS directive is used in an input field 
 
 The Bootstrap validation classes applied by the directive mark an invalid field (plus labels & etc) in red, a valid field in green, and has no effect on non-validated or pristine fields.
 
-The directive is intended for use on AngularJS forms styled with Bootstrap, and works fine on various form input fields.
+The directive is intended for use on AngularJS forms styled with Bootstrap, and works fine on various form input fields. See the [Bootstrap validation states](http://getbootstrap.com/css/#forms-control-validation) for more info.
 
 ### [Demo Page](http://htmlpreview.github.io/?https://github.com/mikeym/m2-validation/blob/master/validation-form-group/demos/demo.html)
 
